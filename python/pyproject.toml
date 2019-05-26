@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "example_project"
+version = "0.1.0"
+description = "The description of the package"
+
+license = "MIT"
+
+authors = [
+    "Sébastien Eustace <sebastien@eustace.io>"
+]
+
+readme = 'README.md'  # Markdown files are supported
+
+repository = "https://github.com/sdispater/poetry"
+homepage = "https://github.com/sdispater/poetry"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+databases = "*"
+orm = "*"
+sqlalchemy = "*"
+starlette = "^0.12.0"
+uvicorn = "^0.7.1"
+aiosqlite = "^0.10.0"
+aiofiles = "^0.4.0"
+jinja2 = "^2.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+pytest-cov = "^2.4"
+black = {version = "^18.3-alpha.0",allows-prereleases = true}
+ipython = "^7.5"
+
+[tool.poetry.scripts]
+create_db = 'models.create_db'
+
